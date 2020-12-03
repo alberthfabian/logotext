@@ -34,9 +34,9 @@ export const summary = () => {
   };
 }
 
-export const form = () => {
+export const form = (code) => {
   return dispatch => {
-    return axios.get(`https://blackisp.herokuapp.com/products`)
+    return axios.get(`https://blackisp.herokuapp.com/postalCodes/${code}`)
     .then(response => {
       dispatch({
         type: 'FORM',
@@ -45,6 +45,19 @@ export const form = () => {
     });
   };
 }
+
+export const contact = (code) => {
+  return dispatch => {
+    return axios({
+      method: 'post',
+      url: 'https://blackisp.herokuapp.com/contact',
+      data: {
+        ...code
+      }
+    });
+  };
+}
+
 
 export const menuTitle = (value) => {
   return {
@@ -66,22 +79,3 @@ export const sum = (value) => {
     payload: value
   }
 }
-
-// export const watch_movie = (id) => {
-//   return dispatch => {
-//     return axios.get(`https://www.omdbapi.com/?i=${id}&apikey=b64a56c4`)
-//     .then(response => {
-//       dispatch({
-//         type: 'WATCH_MOVIE',
-//         payload: response.data
-//       })
-//     });
-//   };
-// }
-
-// export const modal = (value) => {
-//   return {
-//     type: MODAL,
-//     payload: value
-//   }
-// }

@@ -11,7 +11,7 @@ const Home = () => {
   const shop = useSelector((state) => state.shop.summary);
 
 
-  // console.log(price);
+  // console.log(shop.form);
 
   return (
     <div className='data'>

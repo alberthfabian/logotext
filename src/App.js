@@ -5,11 +5,10 @@ import NotFound from './components/NotFound';
 import Layout from './components/Layout';
 import { Provider } from 'react-redux';
 import store from './redux/store';
-import { initial, summary, form } from './redux/actions/ShopAction';
+import { initial, summary } from './redux/actions/ShopAction';
 
 store.dispatch(initial());
 store.dispatch(summary());
-store.dispatch(form());
 
 function App() {
 

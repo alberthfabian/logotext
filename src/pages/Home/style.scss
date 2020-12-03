@@ -1,10 +1,22 @@
 @import '../../components/Sass/variables.scss';
 
 .data {
+  margin-top: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  @include media('mobileS') {
+    display: block;        
+  }
+  @include media('laptop') {
+    display: flex;        
+  }
   .cardOrden {
-    margin-top: 30px;
+    @include media('mobileS') {
+      margin-top: 30px;     
+    }
+    @include media('laptop') {
+      margin-top: 0px;       
+    }
     .order {
       border: 1px solid$lightGray;
       margin-top: 20px;

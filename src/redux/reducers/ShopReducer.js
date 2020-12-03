@@ -49,7 +49,7 @@ const shop = (state = [], action) => {
     case FORM: {
       return {
         ...state,
-        sum: action.payload
+        form: action.payload
       }
     }
     default: return state;

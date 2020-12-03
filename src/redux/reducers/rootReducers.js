@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
 import shop from './ShopReducer';
-import like from './buscadorReducer';
 
 const rootReducers = combineReducers({
-  shop,
-  like
+  shop
 });
 
 export default rootReducers;
