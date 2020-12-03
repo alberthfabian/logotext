@@ -1,0 +1,40 @@
+@import '../Sass/variables.scss';
+
+.listL {
+  &__title {
+    position: relative;
+    list-style:none;
+    @include media('laptop') {
+      margin: 5px 30px 5px 30px;           
+    }
+  }
+  &:hover {
+    background-color: $black;
+    cursor: pointer;
+    border-radius: 10px;
+    .subItems {
+      display: block;
+    }
+    &:hover {
+      color: $orange;
+    }
+  }
+  .subItems {
+    @include media('mobileS') {
+      display: none;         
+    }
+    position: absolute;
+    top: 25px;
+    left: -29px;
+    padding: 0px; 
+    &__title {
+      list-style:none;
+      padding: 5px 17px 5px 17px; 
+      border-radius: 10px;
+      &:hover {
+        background-color: $black;
+        color: $orange;
+      }
+    }
+  }
+}

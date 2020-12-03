@@ -1,0 +1,36 @@
+@import '../Sass/variables.scss';
+
+.menu {
+  position: relative;
+  @include media('laptop') {
+    display: none;       
+  }
+  #hide {
+    background-color: transparent;
+    border: 0px solid;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    img {
+      width: 30px;
+    }
+  }
+  .slide {
+    position: absolute;
+    left: 0px;
+  }
+}
+
+.moveMenu {
+  position: absolute;
+  left: -250px;
+  top: 15px;
+  .show {
+    padding: 0px;
+    background-color:rgba(140, 140, 233, 0.3);
+  }
+}
+

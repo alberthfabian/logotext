@@ -1,0 +1,76 @@
+@import '../../components/Sass/variables.scss';
+
+.data {
+  display: flex;
+  justify-content: center;
+  .cardOrden {
+    margin-top: 30px;
+    .order {
+      border: 1px solid$lightGray;
+      margin-top: 20px;
+      max-width: 300px;
+      margin: auto;
+      h4{
+        text-align: center;
+        background-color: $lightGray;
+        margin: 0px;
+      }
+      .container {
+        display: block;
+      }
+      .editar {
+        display: flex;
+        justify-content: flex-end;
+        button {
+          background-color: $fuchsia;
+          color: $white;
+          border: 0px solid;
+          &:focus {
+            outline: none;
+          }
+          &:hover {
+            cursor: pointer;
+          }
+          margin: 10px;
+        }
+      }
+      .subtotal {
+        font-family: 'Roboto', sans-serif;
+        font-size: 10px;
+        background-color: $lightGray;
+        padding: 10px 5px 15px 5px;
+        &__total {
+          display: flex;
+          justify-content: space-between;
+          h5 {
+            margin: 0px;
+          }
+          p {
+            margin: 0px;
+            font-weight: bold;
+          }
+        }
+        &__calculate {
+          display: flex;
+          justify-content: space-between;
+          h5 {
+            margin: 0px;
+          }
+          p {
+            margin: 0px;
+            font-weight: bold;
+          }
+        }
+      }
+      .total {
+        display: flex;
+        justify-content: space-between;
+        padding: 3px 5px 3px 5px;
+        background-color: $black;
+        color: $white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,169 @@
+@import '../Sass/variables.scss';
+
+.textS {
+  justify-content: space-around;
+  @include media('mobileS') {
+    display: flex;      
+  }
+  @include media('laptop') {
+    display: none;      
+  }
+  font-size: 10px;
+  margin-bottom: 10px;
+  &__sent {
+    font-family: 'Roboto', sans-serif;
+    color: $white;
+    background-color: $black;
+    position: absolute;
+    left: 0px;
+    @include media('mobileS') {
+      padding: 0px 27px 0px 27px;         
+    }
+    @include media('mobileM') {
+      padding: 0px 40px 0px 40px;         
+    }
+    @include media('mobileL') {
+      padding: 0px 54px 0px 54px;         
+    }
+    @include media('tablet') {
+      padding: 0px 150px 0px 150px;         
+    }
+  }
+  &__upper {
+    font-family: 'Roboto', sans-serif;
+    color: $white;
+    background-color: $gray;
+    position: absolute;
+    right: 0px;
+    @include media('mobileS') {
+      padding: 0px 27px 0px 27px;         
+    }
+    @include media('mobileM') {
+      padding: 0px 40px 0px 40px;         
+    }
+    @include media('mobileL') {
+      padding: 0px 54px 0px 54px;         
+    }
+    @include media('tablet') {
+      padding: 0px 150px 0px 150px;         
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  .text{
+    @include media('mobileS') {
+      display: none;          
+    }
+    @include media('laptop') {
+      display: inline;          
+    }
+    &__sent {
+      font-family: 'Roboto', sans-serif;
+      -webkit-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+      position: absolute;
+      left: 0px;
+      top: 54px;
+      background-color: $black;
+      color: $white;
+      font-size: 12px;
+      padding: 4px 15px 4px 4px;
+    }
+    .triangleBlack {
+      width: 0;
+      height: 0;
+      border-right: 11px solid transparent;
+      border-bottom: 11px solid transparent;
+      border-left: 11px solid $black;
+      border-top: 11px solid $black;
+      position: absolute;
+      left: 69px;
+      top: 157px;
+    }
+    &__upper {
+      font-family: 'Roboto', sans-serif;
+      -webkit-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+      position: absolute;
+      left: 26px;
+      top: 50px;
+      background-color: $gray;
+      color: $white;
+      font-size: 12px;
+      padding: 4px 15px 4px 4px;
+    }
+    .triangleGrey {
+      width: 0;
+      height: 0; 
+      border-left: 11px solid transparent;
+      border-bottom: 11px solid transparent;
+      border-right: 11px solid $gray;
+      border-top: 11px solid $gray;
+      position: absolute;
+      left: 91px;
+      top: 148px;
+    }
+  }
+  .figure {
+    .wishes {
+      @include media('mobileS') {
+        display: none;          
+      }
+      @include media('laptop') {
+        display: inline;          
+      }
+    }
+    display: flex;
+    &__list {
+      display: flex;
+      margin: 0px;
+      img {
+        width: 20px;
+        height: 20px;
+        margin: 0px 0px 0px 30px;
+      }
+      p {
+        margin: 0px 0px 0px 10px;
+        @include media('mobileS') {
+          display: none;          
+        }
+        @include media('laptop') {
+          display: inline;          
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  margin-top: -50px;
+  img {
+    width: 120px;
+    @include media('mobileS') {
+      width: 80px;         
+    }
+  }
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+}
+
+.verticalMenu {
+  display: flex;
+  justify-content: center;
+  @include media('mobileS') {
+    display: none;          
+  }
+  @include media('laptop') {
+    display: flex;          
+  }
+}
